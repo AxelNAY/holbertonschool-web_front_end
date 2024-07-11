@@ -31,7 +31,7 @@ body {
     font-family: var(--font-family-base);
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-regular);
-    min-height: var(--line-height-base);
+    line-height: var(--line-height-base);
 }
 
 a {
@@ -48,11 +48,11 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 
-.card-category {
+.card-category .section-tagline {
     color: var(--color-primary);
 }
 
-.section-header .section-tagline {
+.section-header {
     text-align: var(--section-header-align);
 }
 
