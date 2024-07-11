@@ -296,7 +296,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-services .card-title {
-    margin: none;
+    margin: 0;
 }
 
 .card-services a {
@@ -355,7 +355,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-work:hover .card-image {
     transform: scale(1.2);
-    transition: var(--transition-cubic-bezier) var(--transition-duration);
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 .card-work:hover .card-outer {
@@ -368,7 +368,7 @@ h1, h2, h3, h4, h5, h6 {
     left: -0.1rem;
     right: -0.1rem;
     z-index: 1;
-    transition: var(--transition-cubic-bezier) var(--transition-duration);
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 .card-work:hover .card-inner {
@@ -490,7 +490,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--color-white);
     width: 0;
     height: 0.2rem;
-    transition: var(--transition-cubic-bezier) var(--transition-duration);
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 .nav .nav-item:hover .nav-link::before {
