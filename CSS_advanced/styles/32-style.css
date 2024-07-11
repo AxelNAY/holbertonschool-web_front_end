@@ -226,7 +226,7 @@ html {
 }
 
 .header {
-    padding: header-padding;
+    padding: var(--header-padding);
 }
 
 .header-logo {
@@ -262,7 +262,7 @@ a:hover {
 }
 
 a:active {
-    background-color: var(color-light-grey);
+    background-color: var(--color-light-grey);
 }
 
 .button {
@@ -328,7 +328,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-testimonial .card-quote {
-    position: absolute;
+    position: relative;
 }
 
 .card-testimonial .card-quote::before {
@@ -343,6 +343,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-work .card-outer {
     position: relative;
+    overflow: hidden;
 }
 
 .card-work .card-image img {
@@ -428,9 +429,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-tagline {
-    color: var(--color-primary);
     font-family: var(--font-family-title);
-    text-transform: var(--font-weight-bold);
+    text-transform: var(--section-tagline-transform);
+    font-weight: var(--font-weight-bold);
     margin: var(--section-tagline-margin);
 }
 
@@ -499,7 +500,7 @@ h1, h2, h3, h4, h5, h6 {
 
 ul.row {
     margin: 0;
-    padding: none;
+    padding: 0;
     list-style: none;
 }
 
@@ -535,7 +536,7 @@ ul.row {
 }
 
 .footer-copyright {
-    margin: none;
+    margin: 0;
     font-size: var(--font-size-small);
     color: var(--text-color);
 }
