@@ -48,8 +48,8 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 
-.card-category .section-tagline {
-    color: var(--color-primary);
+.card-category, .section-tagline {
+	color: var(--color-primary);
 }
 
 .section-header {
@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-tagline {
-    font-family: var(--font-family-title);
-    text-transform: var(--section-tagline-transform);
-    font-weight: var(--font-weight-bold);
+	font-family: var(--font-family-title);
+	text-transform: var(--section-tagline-transform);
+	font-weight: var(--font-weight-bold);
 }
