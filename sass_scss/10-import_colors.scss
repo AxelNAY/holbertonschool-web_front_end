@@ -1,0 +1,11 @@
+/*Sass file with different text color for classes .red, .green and .blue. This colors are imported from 10-colors.scss file.*/
+@import "10-colors";
+
+.red {
+    color: $red; }
+  
+.green {
+    color: $green; }
+
+.blue {
+    color: $blue; }

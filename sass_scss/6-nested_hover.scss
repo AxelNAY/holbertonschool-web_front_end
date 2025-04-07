@@ -1,0 +1,8 @@
+/*Sass file with nested declarations where a button text-color change when use his hover*/
+$text-color: #FF0000;
+$hover-color: #00FF00;
+
+button {
+    color: $text-color;
+    :hover {
+      color: $hover-color; } }
