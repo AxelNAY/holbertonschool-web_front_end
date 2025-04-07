@@ -1,0 +1,8 @@
+/*Sass file with nested declarations and two variable text color for body and red class*/
+$text-color: #3D3D3D;
+$red: #FF0000;
+
+body {
+    color: $text-color; }
+    body .red {
+      color: $red; }
