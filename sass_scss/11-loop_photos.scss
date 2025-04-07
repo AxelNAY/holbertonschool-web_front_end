@@ -1,15 +1,7 @@
 /*Sass file that creates a class for each name in the list $list-names and assigns the background image based on the name*/
-@use 'sass:list';
 @import "11-photos";
 
-.photo-julien {
-    background: image-url("photos/"+list.nth($list-names, 1)+".jpg") no-repeat; }
-  
-.photo-john {
-    background: image-url("photos/"+list.nth($list-names, 2)+".jpg") no-repeat; }
-  
-.photo-sam {
-    background: image-url("photos/"+list.nth($list-names, 3)+".jpg") no-repeat; }
-  
-.photo-damian {
-    background: image-url("photos/"+list.nth($list-names, 4)+".jpg") no-repeat; }
+@each $name in $list-names {
+    .photo-#{$name} {
+        background: image-url("photos/"+$name+".jpg") no-repeat; }
+}
