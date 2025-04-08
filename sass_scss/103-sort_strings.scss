@@ -1,0 +1,26 @@
+/*Sass file that sorts the variable $list_to_sort and prints the sorted list in the debug output.*/
+@use 'sass:list';
+
+$list_to_sort: john anna zoe kim felicia carrie;
+
+@function sort($list) {
+    $sort-list: ();
+    $temp: $list;
+
+    $min: list.nth($temp, 1);
+    $min-index: 1;
+
+    @for $i from 1 through list.length($temp) {
+        $current: list.nth($temp, $i);
+        @if $current < $min {
+          $min: $current;
+          $min-index: $i;
+        }
+    }
+
+    $sort-list: append($sort-list, $min);
+}
+
+$list-sort: sort($list_to_sort);
+
+@debug $list-sort;
