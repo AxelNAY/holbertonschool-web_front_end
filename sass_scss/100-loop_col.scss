@@ -1,17 +1,17 @@
 /*Sass file that creates classes with different width.*/
 $percent: 100%;
 $temp: 33%;
+$display: $percent;
 
 @for $i from 1 through 4 {
     @if $i == 3 {
-        .col-#{$i} {
-            width: $temp;
-        }
+        $display: $temp;
     }
     @else {
-        .col-#{$i} {
-            width: $percent;
-        }
+        $display: $percent;
         $percent: calc($percent / 2);
+    }
+    .col-#{$i} {
+        width: $display;
     }
 }
