@@ -1,26 +1,44 @@
 /*Sass file that sorts the variable $list_to_sort and prints the sorted list in the debug output.*/
 @use 'sass:list';
+@use "sass:string";
+@import "103-sort_list";
 
-$list_to_sort: john anna zoe kim felicia carrie;
+@function remove-at($list, $index) {
+  $new-list: ();
+  @for $i from 1 through list.length($list) {
+    @if $i != $index {
+      $new-list: list.append($new-list, list.nth($list, $i));
+    }
+  }
+  @return $new-list;
+}
 
 @function sort($list) {
-    $sort-list: ();
-    $temp: $list;
+  $alphabet: "abcdefghijklmnopqrstuvwxyz";
+  $sorted: ();
 
-    $min: list.nth($temp, 1);
+  @while list.length($list) > 0 {
+    $min: list.nth($list, 1);
     $min-index: 1;
 
-    @for $i from 1 through list.length($temp) {
-        $current: list.nth($temp, $i);
-        @if $current < $min {
+    @if list.length($list) > 1 {
+      @for $i from 2 through list.length($list) {
+        $current: list.nth($list, $i);
+
+        @if string.index($alphabet, string.to-lower-case(string.slice($current, 1, 1))) <
+            string.index($alphabet, string.to-lower-case(string.slice($min, 1, 1))) {
           $min: $current;
           $min-index: $i;
         }
+      }
     }
 
-    $sort-list: append($sort-list, $min);
+    $sorted: list.append($sorted, $min);
+    $list: remove-at($list, $min-index);
+  }
+
+  @return $sorted;
 }
 
-$list-sort: sort($list_to_sort);
-
-@debug $list-sort;
+$sort-list: sort($list_to_sort);
+@debug $sort-list;
