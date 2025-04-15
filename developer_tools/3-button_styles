@@ -44,6 +44,6 @@ $ head -2 3-button_styles
     font-size: 1.25rem;
     text-decoration: none;
     color: #212529;
-    background-color: #f8f9fa;
+    background-color: transparent;
     border-color: #f8f9fa;
 $
