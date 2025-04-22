@@ -593,7 +593,7 @@
 
   .post-meta-list strong {
     color: var(--color-primary);
-    font-size: font-size-small;
+    font-size: var(--font-size-small);
     text-transform: uppercase;
     display: block;
   }
@@ -625,6 +625,6 @@
     content: ", ";
   }
 
-  .tag-list li::after:last-child {
+  .tag-list li:last-child::after {
     content: "";
   }
