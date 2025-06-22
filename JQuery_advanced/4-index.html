@@ -21,24 +21,40 @@
                     </table>
                 `;
                 $(document.body).append(tableHtml);
+                const firstRow = `
+                    <tr>
+                        <td>Guillaume</td>
+                        <td>Salva</td>
+                    </tr>
+                `;
+                const secondRow = `
+                    <tr>
+                        <td>Paulette</td>
+                        <td>Salva</td>
+                    </tr>
+                `;
+                const thirdRow = `
+                    <tr>
+                        <td>Antoine</td>
+                        <td>Salva</td>
+                    </tr>
+                `;
+                $('tbody').append(firstRow);
+                $('tbody').append(secondRow);
+                $('tbody').append(thirdRow);
             }
-            function addNewMember(firstName, lastName)
+            document.addEventListener('DOMContentLoaded', createFamilyTree);
+            function replaceFamilyTree()
             {
                 const newtable = `
                     <tr>
-                        <td>$(firstName)</td>
-                        <td>$(lastName)</td>
-                        <td>(x)</td>
+                        <td>Gerard</td>
+                        <td>Bonissa</td>
                     </tr>
                 `;
-                $('tbody').append(newtable);
+                $('tbody').html(newtable);
             }
-            document.addEventListener('DOMContentLoaded', createFamilyTree);
-            document.addEventListener('DOMContentLoaded', addNewMember("Guillaume", "Salva"));
-            document.addEventListener('DOMContentLoaded', addNewMember("Arielle", "Snizt"));
-            document.addEventListener('DOMContentLoaded', addNewMember("Fanette", "Snizt"));
-            document.addEventListener('DOMContentLoaded', addNewMember("Gerard", "Snizt"));
-            document.addEventListener('DOMContentLoaded', addNewMember("Victor", "Salva"));
+            document.addEventListener('DOMContentLoaded', replaceFamilyTree);
         </script>
     </head>
 

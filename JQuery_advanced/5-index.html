@@ -7,7 +7,44 @@
         integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
         crossorigin="anonymous"></script>
         <script type="application/javascript">
-
+            function createFamilyTree()
+            {
+                const tableHtml = `
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                `;
+                $(document.body).append(tableHtml);
+            }
+            function addNewMember(firstName, lastName)
+            {
+                const newtable = `
+                    <tr>
+                        <td>${firstName}</td>
+                        <td>${lastName}</td>
+                        <td class="btnclose">(x)</td>
+                    </tr>
+                `;
+                $(document).on('click', 'td:contains("(x)")', function() {
+                    $(this).closest('tr').remove();
+                });
+                $('tbody').append(newtable);
+                $('.btnclose').css("background-color", "orange");
+            }
+            $(document).ready(function() {
+                createFamilyTree();
+                addNewMember("Guillaume", "Salva");
+                addNewMember("Arielle", "Snizt");
+                addNewMember("Fanette", "Snizt");
+                addNewMember("Gerard", "Snizt");
+                addNewMember("Victor", "Salva");
+            });
         </script>
     </head>
 

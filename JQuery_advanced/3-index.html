@@ -17,36 +17,33 @@
                                 <th>Lastname</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Guillaume</td>
-                                <td>Salva</td>
-                            </tr>
-                            <tr>
-                                <td>Paulette</td>
-                                <td>Salva</td>
-                            </tr>
-                            <tr>
-                                <td>Antoine</td>
-                                <td>Salva</td>
-                            </tr>
-                        </tbody>
+                        <tbody></tbody>
                     </table>
                 `;
                 $(document.body).append(tableHtml);
-            }
-            document.addEventListener('DOMContentLoaded', createFamilyTree);
-            function replaceFamilyTree()
-            {
-                const newtable = `
+                const firstRow = `
                     <tr>
-                        <td>Gerard</td>
-                        <td>Bonissa</td>
+                        <td>Guillaume</td>
+                        <td>Salva</td>
                     </tr>
                 `;
-                $('tbody').html(newtable);
+                const secondRow = `
+                    <tr>
+                        <td>Paulette</td>
+                        <td>Salva</td>
+                    </tr>
+                `;
+                const thirdRow = `
+                    <tr>
+                        <td>Antoine</td>
+                        <td>Salva</td>
+                    </tr>
+                `;
+                $('tbody').append(firstRow);
+                $('tbody').append(secondRow);
+                $('tbody').append(thirdRow);
             }
-            document.addEventListener('DOMContentLoaded', replaceFamilyTree);
+            document.addEventListener('DOMContentLoaded', createFamilyTree);
         </script>
     </head>
 
